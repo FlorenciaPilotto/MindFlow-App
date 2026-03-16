@@ -1,0 +1,9 @@
+# Flutter Lint Configuration
+
+# Add your lint rules below
+linter:
+  rules:
+    # Example rule, modify as needed
+    - type: error
+      rule: public_member_api_docs
+      severity: error
