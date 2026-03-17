@@ -31,8 +31,8 @@ class AppUtils {
     return RegExp(AppConstants.passwordPattern).hasMatch(password);
   }
 
-  /// Capitalises the first letter of [text].
-  static String capitalise(String text) {
+  /// Capitalizes the first letter of [text].
+  static String capitalize(String text) {
     if (text.isEmpty) return text;
     return text[0].toUpperCase() + text.substring(1);
   }
