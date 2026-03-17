@@ -1,9 +1,7 @@
 # Flutter Lint Configuration
 
-# Add your lint rules below
 linter:
   rules:
-    # Example rule, modify as needed
-    - type: error
-      rule: public_member_api_docs
-      severity: error
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - avoid_print

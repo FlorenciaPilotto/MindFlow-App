@@ -40,6 +40,8 @@ class MeditationService {
   Future<List<String>> getCategories() async {
     // Assuming categories are stored in a separate collection
     QuerySnapshot snapshot = await _firestore.collection('categories').get();
-    return snapshot.docs.map((doc) => doc.data()['name'] as String).toList();
+    return snapshot.docs
+        .map((doc) => (doc.data() as Map<String, dynamic>)['name'] as String)
+        .toList();
   }
 }
