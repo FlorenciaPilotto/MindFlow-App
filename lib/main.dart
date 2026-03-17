@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:mind_flow/screens/home_screen.dart';
+import 'package:mind_flow/screens/auth_screen.dart';
+import 'package:mind_flow/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,32 +17,9 @@ class MindFlowApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MindFlow',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
-      ),
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('MindFlow'),
-      ),
-      body: const Center(
-        child: Text('Welcome to MindFlow'),
-      ),
+      theme: AppTheme.light(),
+      darkTheme: AppTheme.dark(),
+      home: const AuthScreen(),
     );
   }
 }

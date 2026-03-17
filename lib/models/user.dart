@@ -8,6 +8,7 @@ class User {
   final int totalMeditationMinutes;
   final List<String> completedMeditationIds;
   final List<String> favoriteCategories;
+  final List<String> favoriteMeditationIds;
 
   User({
     required this.id,
@@ -19,6 +20,7 @@ class User {
     this.totalMeditationMinutes = 0,
     this.completedMeditationIds = const [],
     this.favoriteCategories = const [],
+    this.favoriteMeditationIds = const [],
   });
 
   factory User.fromJson(Map<String, dynamic> json) {
@@ -32,6 +34,7 @@ class User {
       totalMeditationMinutes: json['totalMeditationMinutes'] as int? ?? 0,
       completedMeditationIds: List<String>.from(json['completedMeditationIds'] as List? ?? []),
       favoriteCategories: List<String>.from(json['favoriteCategories'] as List? ?? []),
+      favoriteMeditationIds: List<String>.from(json['favoriteMeditationIds'] as List? ?? []),
     );
   }
 
@@ -46,6 +49,7 @@ class User {
       'totalMeditationMinutes': totalMeditationMinutes,
       'completedMeditationIds': completedMeditationIds,
       'favoriteCategories': favoriteCategories,
+      'favoriteMeditationIds': favoriteMeditationIds,
     };
   }
 
@@ -59,6 +63,7 @@ class User {
     int? totalMeditationMinutes,
     List<String>? completedMeditationIds,
     List<String>? favoriteCategories,
+    List<String>? favoriteMeditationIds,
   }) {
     return User(
       id: id ?? this.id,
@@ -70,6 +75,7 @@ class User {
       totalMeditationMinutes: totalMeditationMinutes ?? this.totalMeditationMinutes,
       completedMeditationIds: completedMeditationIds ?? this.completedMeditationIds,
       favoriteCategories: favoriteCategories ?? this.favoriteCategories,
+      favoriteMeditationIds: favoriteMeditationIds ?? this.favoriteMeditationIds,
     );
   }
 }

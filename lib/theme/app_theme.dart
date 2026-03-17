@@ -5,19 +5,24 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.light,
       primaryColor: Colors.blue,
-      accentColor: Colors.blueAccent,
-      buttonTheme: ButtonThemeData(
-        buttonColor: Colors.blue,
-        textTheme: ButtonTextTheme.primary,
+      colorScheme: const ColorScheme.light(
+        primary: Colors.blue,
+        secondary: Colors.blueAccent,
       ),
-      inputDecorationTheme: InputDecorationTheme(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+        ),
+      ),
+      inputDecorationTheme: const InputDecorationTheme(
         border: OutlineInputBorder(),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.blue),
         ),
         labelStyle: TextStyle(color: Colors.blue),
       ),
-      cardTheme: CardTheme(
+      cardTheme: const CardTheme(
         color: Colors.white,
         elevation: 4,
         shadowColor: Colors.grey,
@@ -29,19 +34,24 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primaryColor: Colors.blueGrey,
-      accentColor: Colors.lightBlue,
-      buttonTheme: ButtonThemeData(
-        buttonColor: Colors.blueGrey,
-        textTheme: ButtonTextTheme.primary,
+      colorScheme: const ColorScheme.dark(
+        primary: Colors.blueGrey,
+        secondary: Colors.lightBlue,
       ),
-      inputDecorationTheme: InputDecorationTheme(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blueGrey,
+          foregroundColor: Colors.white,
+        ),
+      ),
+      inputDecorationTheme: const InputDecorationTheme(
         border: OutlineInputBorder(),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.lightBlue),
         ),
         labelStyle: TextStyle(color: Colors.lightBlue),
       ),
-      cardTheme: CardTheme(
+      cardTheme: const CardTheme(
         color: Colors.black,
         elevation: 4,
         shadowColor: Colors.grey,
